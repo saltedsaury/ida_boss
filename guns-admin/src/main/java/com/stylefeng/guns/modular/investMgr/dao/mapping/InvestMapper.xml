@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.investMgr.dao.InvestMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.investMgr.model.Invest">
+        <id column="id" property="id" />
+        <result column="trade_no" property="tradeNo" />
+        <result column="biz_type" property="bizType" />
+        <result column="customer_no" property="customerNo" />
+        <result column="product_no" property="productNo" />
+        <result column="plan_no" property="planNo" />
+        <result column="ccy" property="ccy" />
+        <result column="amount" property="amount" />
+        <result column="fee" property="fee" />
+        <result column="fine" property="fine" />
+        <result column="status" property="status" />
+        <result column="operator_no" property="operatorNo" />
+        <result column="create_time" property="createTime" />
+        <result column="modified_time" property="modifiedTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, trade_no AS tradeNo, biz_type AS bizType, customer_no AS customerNo, product_no AS productNo, plan_no AS planNo, ccy, amount, fee, fine, status, operator_no AS operatorNo, create_time AS createTime, modified_time AS modifiedTime
+    </sql>
+
+</mapper>

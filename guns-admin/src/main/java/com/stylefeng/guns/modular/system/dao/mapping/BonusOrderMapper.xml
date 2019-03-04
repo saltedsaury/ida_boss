@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.BonusOrderMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.BonusOrder">
+        <id column="id" property="id" />
+        <result column="trade_no" property="tradeNo" />
+        <result column="customer_no" property="customerNo" />
+        <result column="invest_no" property="investNo" />
+        <result column="plan_no" property="planNo" />
+        <result column="periods" property="periods" />
+        <result column="ccy" property="ccy" />
+        <result column="amount" property="amount" />
+        <result column="status" property="status" />
+        <result column="operator_no" property="operatorNo" />
+        <result column="remark" property="remark" />
+        <result column="create_time" property="createTime" />
+        <result column="modified_time" property="modifiedTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, trade_no AS tradeNo, customer_no AS customerNo, invest_no AS investNo, plan_no AS planNo, periods, ccy, amount, status, operator_no AS operatorNo, remark, create_time AS createTime, modified_time AS modifiedTime
+    </sql>
+
+</mapper>

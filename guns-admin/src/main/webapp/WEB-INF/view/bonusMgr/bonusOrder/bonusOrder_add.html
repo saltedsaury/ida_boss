@@ -1,0 +1,40 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="自增id" underline="true"/>
+                            <#input id="tradeNo" name="交易流水" underline="true"/>
+                            <#input id="customerNo" name="客户号" underline="true"/>
+                            <#input id="investNo" name="投资编号" underline="true"/>
+                            <#input id="planNo" name="收益计划编号" underline="true"/>
+                            <#input id="periods" name="期数" underline="true"/>
+                            <#input id="ccy" name="币种"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="amount" name="金额" underline="true"/>
+                            <#input id="status" name="状态" underline="true"/>
+                            <#input id="operatorNo" name="操作员" underline="true"/>
+                            <#input id="remark" name="备注" underline="true"/>
+                            <#input id="createTime" name="创建时间" underline="true"/>
+                            <#input id="modifiedTime" name="修改时间" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="BonusOrderInfoDlg.addSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="BonusOrderInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/bonusMgr/bonusOrder/bonusOrder_info.js"></script>
+@}

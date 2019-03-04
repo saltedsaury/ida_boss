@@ -1,0 +1,37 @@
+@layout("/common/_container.html"){
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>提前赎回管理</h5>
+            </div>
+            <div class="ibox-content">
+                <div class="row row-lg">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <#select id="orderStatus" name="状态">
+                                    <option value ="">  </option>
+                                    @for(status in orderStatus){
+                                    <option value ="${status.code}">${status.desc}</option>
+                                    @}
+                                </#select>
+                            </div>
+                            <div class="col-sm-3">
+                                <#button name="搜索" icon="fa-search" clickFun="Redempt.search()"/>
+                            </div>
+                        </div>
+                        <div class="hidden-xs" id="InvestInfoTableToolbar" role="group">
+                            @if(shiro.hasPermission("/redempt/auditing")){
+                                <#button name="审核" icon="fa-plus" clickFun="Redempt.auditing()"/>
+                            @}
+                        </div>
+                        <#table id="InvestInfoTable"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/redemptMgr/redempt/earlyRedempt.js"></script>
+@}

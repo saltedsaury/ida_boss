@@ -1,0 +1,39 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="" value="${item.id}" underline="true"/>
+                            <#input id="userId" name="" value="${item.userId}" underline="true"/>
+                            <#input id="name" name="" value="${item.name}" underline="true"/>
+                            <#input id="publicKey" name="" value="${item.publicKey}" underline="true"/>
+                            <#input id="accountType" name="" value="${item.accountType}" underline="true"/>
+                            <#input id="address" name="" value="${item.address}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="isFreeze" name="" value="${item.isFreeze}" underline="true"/>
+                            <#input id="encryptPrivateKey" name="" value="${item.encryptPrivateKey}" underline="true"/>
+                            <#input id="userType" name="" value="${item.userType}" underline="true"/>
+                            <#input id="createdAt" name="" value="${item.createdAt}" underline="true"/>
+                            <#input id="updatedAt" name="" value="${item.updatedAt}" underline="true"/>
+                            <#input id="deletedAt" name="" value="${item.deletedAt}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="WalletInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="WalletInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/walletMgr/wallet/wallet_info.js"></script>
+@}

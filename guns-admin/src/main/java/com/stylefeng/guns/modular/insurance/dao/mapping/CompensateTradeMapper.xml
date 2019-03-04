@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.insurance.dao.CompensateTradeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.insurance.model.CompensateTrade">
+        <id column="id" property="id" />
+        <result column="trade_no" property="tradeNo" />
+        <result column="insurance_trade" property="insuranceTrade" />
+        <result column="effective_amount" property="effectiveAmount" />
+        <result column="ccy" property="ccy" />
+        <result column="compensate_amount" property="compensateAmount" />
+        <result column="compensate_ccy" property="compensateCcy" />
+        <result column="status" property="status" />
+        <result column="operator_no" property="operatorNo" />
+        <result column="create_time" property="createTime" />
+        <result column="modified_time" property="modifiedTime" />
+        <result column="customer_no" property="customerNo" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, trade_no AS tradeNo, insurance_trade AS insuranceTrade, effective_amount AS effectiveAmount, ccy, compensate_amount AS compensateAmount, compensate_ccy AS compensateCcy, status, operator_no AS operatorNo, create_time AS createTime, modified_time AS modifiedTime, customer_no AS customerNo
+    </sql>
+
+</mapper>

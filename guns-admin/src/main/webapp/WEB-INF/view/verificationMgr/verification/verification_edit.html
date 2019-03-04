@@ -1,0 +1,26 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${id}">
+
+            <div class="row">
+                @for(i in item){
+                <p>${i.fileType}</p>
+                <img src = "${ctxPath}/static/img/${i.url}">
+                @}
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="审核通过" id="ensure" icon="fa-check" clickFun="VerificationInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="审核不通过" id="cancel" icon="fa-eraser" clickFun="VerificationInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/verificationMgr/verification/verification_info.js"></script>
+@}

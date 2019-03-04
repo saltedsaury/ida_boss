@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.walletMgr.dao.WalletMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.walletMgr.model.Wallet">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="name" property="name" />
+        <result column="public_key" property="publicKey" />
+        <result column="account_type" property="accountType" />
+        <result column="address" property="address" />
+        <result column="is_freeze" property="isFreeze" />
+        <result column="encrypt_private_key" property="encryptPrivateKey" />
+        <result column="user_type" property="userType" />
+        <result column="created_at" property="createdAt" />
+        <result column="updated_at" property="updatedAt" />
+        <result column="deleted_at" property="deletedAt" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id AS userId, name, public_key AS publicKey, account_type AS accountType, address, is_freeze AS isFreeze, encrypt_private_key AS encryptPrivateKey, user_type AS userType, created_at AS createdAt, updated_at AS updatedAt, deleted_at AS deletedAt
+    </sql>
+
+</mapper>
